@@ -59,6 +59,7 @@ const showWindow = () =>{
 	mainWindow.openDevTools({ mode: 'detach' })
 }
 
+//This function is copy from https://github.com/kevinsawicki/tray-example
 const getPosition = () =>{
 	const windowBounds = mainWindow.getBounds()
 	const trayBounds = tray.getBounds()
