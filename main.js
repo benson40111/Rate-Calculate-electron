@@ -20,7 +20,7 @@ const createWindow = () =>{
 		height: 170,
 		show: false,
 		frame: false,
-		resizable: false
+		resizable: false,
 	})
 
 	mainWindow.loadURL(`file://${__dirname}/app/index.html`)
