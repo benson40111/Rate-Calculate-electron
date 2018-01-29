@@ -29,5 +29,5 @@ const calc_rate = () =>{
 	document.getElementById('transport-rate').innerHTML = twd / data
 }
 
-const checkDate = () =>{ if (date.getHours() == 23) crawl_coin() }
+const checkDate = () =>{ if (date.getHours() == 9) crawl_coin() }
 checkDate()

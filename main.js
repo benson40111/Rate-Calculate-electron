@@ -3,6 +3,7 @@ const path = require('path')
 const url = require('url')
 require('electron-reload')(__dirname)
 
+const iconDirectory = path.join(__dirname, 'static')
 let mainWindow = undefined
 let tray = undefined
 let clickBool = false
@@ -33,7 +34,7 @@ const createWindow = () =>{
 }
 
 const createTray = () =>{
-	tray = new Tray('./static/logo.png')
+	tray = new Tray(path.join(iconDirectory, 'logo.png'))
 
 	tray.on('right-click', () =>{ toggleWindow() })
 	tray.on('double-click', () =>{ toggleWindow() })
@@ -56,7 +57,7 @@ const showWindow = () =>{
 	mainWindow.setPosition(position.x, position.y)
 	mainWindow.show()
 	mainWindow.focus()
-	mainWindow.openDevTools({ mode: 'detach' })
+	//mainWindow.openDevTools({ mode: 'detach' })
 }
 
 //This function is copy from https://github.com/kevinsawicki/tray-example
