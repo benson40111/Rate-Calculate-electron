@@ -3,30 +3,22 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=static/icon.icns --prune=true --out=release-builds"
   },
   "repository": "https://github.com",
   "keywords": [
     "Electron"
   ],
-  "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.7.8",
     "electron-packager": "^10.1.2"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "electron-json-storage": "^4.0.2",
-    "electron-prebuilt": "^1.4.13",
     "electron-reload": "^1.2.2",
-    "electron-storage": "^1.0.7",
-    "node-notifier": "^5.1.2",
     "nodemailer": "^4.4.1",
     "npm": "^5.6.0",
     "request": "^2.83.0"
-  },
-  "scripts" : {
-	  "start": "electron .",
-	  "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=static/icon.icns --prune=true --out=release-builds"
   }
 }

@@ -1,9 +1,10 @@
-const { electron, app, Tray, BrowserWindow, ipc } = require('electron')
+const { electron, app, Tray, BrowserWindow, powerSaveBlocker } = require('electron')
 const path = require('path')
 const url = require('url')
 require('electron-reload')(__dirname)
 
 const iconDirectory = path.join(__dirname, 'static')
+let id = powerSaveBlocker.start('prevent-app-suspension')
 let mainWindow = undefined
 let tray = undefined
 let clickBool = false
@@ -57,7 +58,7 @@ const showWindow = () =>{
 	mainWindow.setPosition(position.x, position.y)
 	mainWindow.show()
 	mainWindow.focus()
-	//mainWindow.openDevTools({ mode: 'detach' })
+	mainWindow.openDevTools({ mode: 'detach' })
 }
 
 //This function is copy from https://github.com/kevinsawicki/tray-example
@@ -71,6 +72,7 @@ const getPosition = () =>{
 
 app.on('window-all-closed', function () {
 	if (process.platform !== 'darwin') {
+		powerSaveBlocker.stop(id)
 		app.quit()
 	}
 })
