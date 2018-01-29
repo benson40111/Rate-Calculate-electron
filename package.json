@@ -2,6 +2,7 @@
   "name": "rate-calc",
   "version": "1.0.0",
   "main": "main.js",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=static/icon.icns --prune=true --out=release-builds"
@@ -11,13 +12,13 @@
     "Electron"
   ],
   "devDependencies": {
-    "electron": "~1.7.8",
+    "electron": "^1.7.11",
     "electron-packager": "^10.1.2"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "electron-reload": "^1.2.2",
-    "nodemailer": "^4.4.1",
+    "nodemailer": "^4.4.2",
     "npm": "^5.6.0",
     "request": "^2.83.0"
   }

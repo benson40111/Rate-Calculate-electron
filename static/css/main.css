@@ -5,6 +5,7 @@
 
 .form-div {
 	text-align: center;
+	margin-top: 20px;
 }
 
 .input-box {
@@ -13,4 +14,9 @@
 
 #transport-rate {
 	font-size: 15px;
+}
+
+.radio-box {
+	display: inline-block;
+	margin-left: 20px;
 }

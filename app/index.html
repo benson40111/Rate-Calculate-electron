@@ -18,13 +18,26 @@
 				<div class="pane-group">
 					<div class="pane">
 						<div class="form-group form-div">
-							<h5 class="form-title">請輸入欲轉換之臺幣：</h5>
-							<input class="form-control input-box" id="TWD" placeholder="1000">
+							<input class="form-control input-box" id="money" placeholder="JPY or TWD">
+						</div>
+						<div class="radio-div">
+							<div class="radio radio-box">
+								<label>
+								<input type="radio" id="to_TWD" name="radios">
+								To TWD
+								</label>
+							</div>
+							<div class="radio radio-box">
+								<label>
+								<input type="radio" id="to_JPY" name="radios" checked>
+								To JPY
+								</label>
+							</div>
 						</div>
 					</div>
 					<div class="pane">
 						<div class="form-div">
-							<h5 class="form-title">日幣</h5>
+							<h5 class="form-title" id="money-type"></h5>
 							<p id="transport-rate"></p>
 						</div>
 					</div>

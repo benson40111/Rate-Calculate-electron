@@ -1,4 +1,4 @@
-const { electron, app, Tray, BrowserWindow, powerSaveBlocker } = require('electron')
+const { electron, app, Tray, BrowserWindow, powerSaveBlocker, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
 require('electron-reload')(__dirname)
@@ -81,4 +81,9 @@ app.on('activate', function () {
 	if (mainWindow === null) {
 		createWindow()
 	}
+})
+
+ipcMain.on('quit-app', () => {
+	tray.destroy()
+	app.quit()
 })
