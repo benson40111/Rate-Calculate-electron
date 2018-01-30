@@ -47,5 +47,6 @@ const calc_rate = () =>{
 
 const quit_app = () =>{ ipcRenderer.send('quit-app') }
 
-const checkDate = () =>{ if (date.getHours() == 9) crawl_coin() }
-checkDate()
+const checkDate = () =>{ if (date.getHours() == 8) crawl_coin() }
+setInterval(() => { checkDate() }, 60 * 1000 * 30)
+
