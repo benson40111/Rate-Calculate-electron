@@ -17,6 +17,9 @@ app.on('ready', () =>{
 })
 
 const createWindow = () =>{
+	//This function just for osx
+	app.dock.hide()
+
 	mainWindow = new BrowserWindow({
 		width: 400, 
 		height: 170,
